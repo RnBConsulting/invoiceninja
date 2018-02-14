@@ -244,23 +244,23 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\SubdomainWasUpdated' => [
             'App\Listeners\DNSListener@addDNSRecord'
         ],
-<<<<<<< HEAD
 
+<<<<<<< HEAD
         //DNS Remove A record from Cloudflare
         'App\Events\SubdomainWasRemoved' => [
             'App\Listeners\DNSListener@removeDNSRecord'
-        ]
-=======
+        ],
         
+=======
+>>>>>>> Basic SAML authentication works, but creates new account for every SAML user that doesn't already exist.
         // SAML
         'Aacotroneo\Saml2\Events\Saml2LoginEvent' => [
             'App\Listeners\LoginListener',
         ],
-        
-		'Aacotroneo\Saml2\Events\Saml2LogoutEvent' => [
+
+	'Aacotroneo\Saml2\Events\Saml2LogoutEvent' => [
             'App\Listeners\LogoutListener',
         ],
->>>>>>> Basic import of SAML environment
 
         /*
         // Update events

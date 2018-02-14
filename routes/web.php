@@ -386,6 +386,10 @@ Route::get('feed', 'AppController@redirect');
 Route::get('comments/feed', 'AppController@redirect');
 Route::get('terms', 'AppController@redirect');
 
+Route::group(['middleware' => ['samlauth']], function () {
+	Route::get('loggedin', 'SAMLController@loggedin');
+});
+
 /*
 if (Utils::isNinjaDev())
 {
